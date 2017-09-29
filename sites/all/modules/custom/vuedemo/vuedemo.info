@@ -9,3 +9,4 @@ dependencies[] = system(>= 7.40)
 
 scripts[] = vue.min.js
 scripts[] = demo.js
+stylesheets[all][] = style.scss

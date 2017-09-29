@@ -10,7 +10,7 @@ window.onload = function () {
   new Vue({
     el: "#demo",
     data: {
-      phrase: '123s'
+      phrase: '123'
     },
     computed: {
       length: function () {

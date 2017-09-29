@@ -6,11 +6,8 @@ engine = 'phptemplate'
 stylesheets[all][] = style.css
 stylesheets[all][] = layout.css
 stylesheets[screen and (max-width: 1000px)][] = screen.css
-stylesheets[all][] = stylesheets/test.css
-
-compass[status] = 1
-compass[sass_dir] = "sass"
-compass[css_dir] = "css"
+stylesheets[all][] = sass/test.scss
+stylesheets[all][] = sass/useSass.scss
 
 regions[sidebar_first] = Sidebar first
 regions[sidebar_second] = Sidebar second
