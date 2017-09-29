@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Stores main functions for the module.
+ */
+
+/**
+ * Hook implementations.
+ */
+
+/**
+ * Implements hook_libraries_info().
+ */
+function importlibraries_libraries_info() {
+  $libraries['vue'] = array(
+    'name' => 'Vue.js',
+    'vendor url' => 'https://github.com/vuejs',
+    'download url' => 'https://github.com/vuejs/vue',
+    'download file url' => 'https://github.com/vuejs/vue/archive/v2.4.2.tar.gz',
+    'path' => 'dist',
+    'version arguments' => array(
+      'file' => 'package.json',
+      'pattern' => '/"version": "(\d+\.\d+.\d+)"/',
+      'lines' => 3,
+    ),
+    'version callback' => 'short_circuit_version',
+    'files' => array(
+      'js' => array(
+        'vue.min.js' => array('group' => JS_LIBRARY),
+      ),
+    ),
+  );
+
+  $libraries['vue_router'] = array(
+    'name' => 'The official router for Vue.js',
+    'vendor url' => 'https://github.com/vuejs',
+    'download url' => 'https://github.com/vuejs/vue-router',
+    'download file url' => 'https://github.com/vuejs/vue-router/archive/v2.7.0.tar.gz',
+    'path' => 'dist',
+    'version arguments' => array(
+      'file' => 'package.json',
+      'pattern' => '/"version": "(\d+\.\d+.\d+)"/',
+      'lines' => 3,
+    ),
+    'version callback' => 'short_circuit_version',
+    'files' => array(
+      'js' => array(
+        'vue-router.min.js' => array('group' => JS_LIBRARY),
+      ),
+    ),
+  );
+
+  $libraries['vuex'] = array(
+    'name' => 'Vuex',
+    'vendor url' => 'https://github.com/vuejs/vuex',
+    'download url' => 'https://github.com/vuejs/vuex/releases',
+    'download file url' => 'https://github.com/vuejs/vuex/archive/v2.3.0.tar.gz',
+    'path' => 'dist',
+    'version arguments' => array(
+      'file' => 'package.json',
+      'pattern' => '/"version": "(\d+\.\d+.\d+)"/',
+      'lines' => 3,
+    ),
+    'version callback' => 'short_circuit_version',
+    'files' => array(
+      'js' => array(
+        'vuex.min.js' => array('group' => JS_LIBRARY),
+      ),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Theme functions.
+ */
+
+/**
+ * Hook related functions.
+ */
+
+/**
+ * Other functions.
+ */
+/**
+ * Short-circuit the version argument.
+ */
+function short_circuit_version() {
+  return TRUE;
+}

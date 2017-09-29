@@ -1,0 +1,7 @@
+name = Import Libraries
+description = Provides a bridge between Drupal and third part libraries
+core = 7.x
+package = Custom
+
+dependencies[] = libraries:libraries
+

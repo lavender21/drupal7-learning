@@ -1,0 +1,28 @@
+
+#header a{
+  color:#fff;
+  font-weight: 900;
+}
+
+#navigation .section,
+#main{
+  display: flex;
+}
+#navigation .section h2{
+  display: none;
+}
+#navigation .section{
+  padding-left:100px;
+}
+
+#sidebar-first,
+#sidebar-second{
+  width:20%;
+  padding-left:100px;
+}
+
+#content{
+  width:50%;
+  margin:0 auto;
+}
+

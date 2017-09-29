@@ -1,0 +1,44 @@
+<?php
+
+/* implement hook_block_info() */
+function vuedemo_block_info()
+{
+  $blocks['vuedemo'] = array(
+    'info' => t('vue demo'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+  return $blocks;
+}
+
+/* implement hook_block_view() */
+function vuedemo_block_view($delta = '')
+{
+//  drupal_add_js(drupal_get_path('module', 'vuedemo') . '/demo.js');      //用于加载js
+
+  $block = array();
+  switch ($delta) {
+    case 'vuedemo':
+      $block['subject'] = t('vue demo');
+      $block['content'] = array(
+        '#markup' => theme('vue_demo_page', array()),
+//        '#attached' => array(                                             // 用于加载js
+//          'js' => array(
+//            'data' => drupal_get_path('module', 'vuedemo') . '/demo.js',
+//            'type' => 'file',
+//          ))
+      );
+      break;
+  }
+  return $block;
+}
+
+/* implement hook_theme() */
+function vuedemo_theme($existing, $type, $theme, $path)
+{
+  $theme = array('vue_demo_page' => array(
+    'template' => 'vue-demo-page'
+  ));
+  return $theme;
+}
+
+?>

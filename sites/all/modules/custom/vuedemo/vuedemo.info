@@ -1,0 +1,11 @@
+name = Vue Demo
+description = provides a demo to test vue lib is useful
+core = 7.x
+package = Custom
+
+dependencies[] = block
+dependencies[] = system(>= 7.40)
+//dependencies[] = importlibraries
+
+scripts[] = vue.min.js
+scripts[] = demo.js

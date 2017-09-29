@@ -1,0 +1,22 @@
+name = lavender
+description = Description of my theme.
+core = 7.x
+engine = 'phptemplate'
+
+stylesheets[all][] = style.css
+stylesheets[all][] = layout.css
+stylesheets[screen and (max-width: 1000px)][] = screen.css
+stylesheets[all][] = stylesheets/test.css
+
+compass[status] = 1
+compass[sass_dir] = "sass"
+compass[css_dir] = "css"
+
+regions[sidebar_first] = Sidebar first
+regions[sidebar_second] = Sidebar second
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+
+scripts[] = js/test.js
+//scripts[] = js/vue.min.js
